@@ -1,0 +1,36 @@
+﻿<Window x:Class="AdminSphere.AddDocumentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminSphere"
+        mc:Ignorable="d"
+        Title="Добавление документа" Height="200" Width="500" Background="BurlyWood" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+    <Grid>
+        <Grid Margin="10" Background="BurlyWood">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Наименование документа:" />
+            <TextBox x:Name="txtName" Grid.Row="0" Background="PaleGreen" Grid.Column="1" Margin="5" />
+            <Label Grid.Row="1" Grid.Column="0" Content="Тип:" />
+            <TextBox x:Name="txtType" Grid.Row="1" Background="PaleGreen" Grid.Column="1" Margin="5" />
+            <Label Grid.Row="2" Grid.Column="0" Content="Дата утверждения:" />
+            <TextBox x:Name="txtDate" Grid.Row="2" Background="PaleGreen" Grid.Column="1" Margin="5" />
+            <Button Background="Gray" Grid.Row="6" Grid.Column="0" Content="Назад" Margin="7" Click="BackButton_Click" />
+            <Button Background="Green" Grid.Row="6" Grid.Column="1" Content="Добавить документ" Margin="7" Click="Button_Click"/>
+            <Label Grid.Row="7" Foreground="Red" Grid.Column="0" Content="*Данные необходимо вводить только на русском!" Grid.ColumnSpan="2" Margin="0,0,82,-14" />
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="AdminSphere.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminSphere"
+        mc:Ignorable="d"
+        Title="AdminSphere" Height="350" Width="280" Background="BurlyWood" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+    <Window.Resources>
+        <Storyboard x:Key="RedBorderAnimation">
+            <ColorAnimation Storyboard.TargetProperty="(TextBox.BorderBrush).(SolidColorBrush.Color)"
+                    To="Red" Duration="0:0:1" />
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Grid VerticalAlignment="Center">
+            <StackPanel Width="200" Margin="20">
+                <TextBlock Foreground="Green" HorizontalAlignment="Stretch" 
+                       FontSize="30" Margin="0,0,0,20" Text="Авторизация" TextAlignment="Center" />
+                <TextBlock Foreground="Black" HorizontalAlignment="Stretch" 
+                       FontSize="15" Margin="0,0,0,10" Text="Логин" />
+                <TextBox   BorderThickness="5" Background="PaleGreen" 
+                       HorizontalAlignment="Stretch" Name="txtUserLogin"  FontSize="15"  
+                       Margin="0,0,0,10" BorderBrush="PaleGreen" />
+                <TextBlock HorizontalAlignment="Stretch" FontSize="15" Margin="0,0,0,10" Text="Пароль" Foreground="Black"/>
+                <Grid>
+                    <TextBox  BorderThickness="5" BorderBrush="PaleGreen" 
+                          Background="PaleGreen" FontSize="15" Name="txtUserPassword"  
+                          Margin="0,0,0,10" HorizontalAlignment="Stretch" Width="200"/>
+                    <PasswordBox x:Name="PasswordBox"  BorderThickness="5" 
+                             BorderBrush="PaleGreen" Background="PaleGreen" FontSize="15"  
+                             Margin="0,0,0,10" HorizontalAlignment="Stretch" Width="200"/>
+                </Grid>
+                <CheckBox x:Name="chkShowPassword" IsChecked="True" Background="White" Content="Показать пароль/Скрыть пароль" 
+                      Checked="chkUsePassword_Checked" Unchecked="chkUsePassword_Unchecked" IsThreeState="False"/>
+                <Button  Background="Green" Content="Авторизация" Margin="0,5,0,0" Click="AvtorizCustomerButton_Click"/>
+                <Button  Background="Green" HorizontalAlignment="Stretch" 
+                     Content="Регистрация" Margin="0,10,0,0" Click="RegisterCustomerButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
